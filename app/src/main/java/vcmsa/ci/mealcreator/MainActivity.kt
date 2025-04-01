@@ -1,10 +1,10 @@
-package vcmsa.ci.mealapp
+package vcmsa.ci.mealcreator
 
 import android.os.Bundle
 import android.widget.*
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import vcmsa.ci.mealcreator.R
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,15 +45,16 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Please select a valid time", Toast.LENGTH_SHORT).show()
             }
-            // Clear button
-            btnClear.setOnClickListener {
-                txtMeal.text = ""
-            }
+        }
 
-            // Exit button
-            btnExit.setOnClickListener {
-                finish()
-            }
+        // Clear button
+        btnClear.setOnClickListener {
+            txtMeal.text = ""
+        }
+
+        // Exit button
+        btnExit.setOnClickListener {
+            finish()
         }
     }
 }
