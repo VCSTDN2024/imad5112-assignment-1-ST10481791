@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- This TextView gives the use an intstruction on what to do-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:text="PLEASE SELECT THE TIME OF DAY "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <!-- the AutoCompleteTextView is where the user will select the time of day-->
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/white"
+            android:hint="@string/time_of_day"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- This TextView is where the meal will be displayed after the generate button is clicked. -->
+    <TextView
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        tools:ignore="ExtraText" />
+
+    <!-- The Generate Button makes the action of recommanding what meal the user should eat. -->
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="25dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Generate" />
+
+    <!-- The Clear Button works as a reset button for what has been displayed in the TextView-->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="25dp"
+        android:layout_marginBottom="100dp"
+        android:text="Clear" />
+    <!-- The Exit Button as the name says, exits out of the app. -->
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:textSize="25dp"
+        android:layout_marginRight="150dp"
+        android:text="Exit" />
+
+
+</LinearLayout>
